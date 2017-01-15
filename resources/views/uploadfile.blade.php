@@ -25,14 +25,23 @@
       
      echo '<p align=\'left\'>';
         echo '<br><br><br>';
-        echo Form::open(['&nbsp;&nbsp;url'=>'/uploadfile','files'=>'true']);
+
+       echo '&nbsp;&nbsp;';//.Form::open(array(url=>/uploadfile','files'=>\'true\'));
+          
+        echo Form::open(array('url'=>'/uploadfile','method'=>'POST', 'files'=>true));
+        //echo '<form action="upload" id="uploadfile" enctype="multipart/form-data">';
+       // echo '<input type="file" name="file[]" multiple files="true">';
         echo '&nbsp;&nbsp;&nbsp;Upload a New Lesson? ';
         echo '<br>';
-       echo Form::file('image');
+        $file = Form::file('image');
+       echo Form::file('image[]', ['multiple' =>'multiple']);
+
+
        //echo   '<a href="/register"><button class="btn btn-default btn-lg" type="submit">Choose File</button></a>';
         echo '<br>';  
         echo '&nbsp;&nbsp;';
-       echo Form::submit('Upload File');
+        echo Form::submit('Upload File');
+
      // echo  '<a href="/uploadfile"><button class="btn btn-default btn-lg" type="">Upload File</button></a>';
       // echo '$up'
         echo '<br>';
