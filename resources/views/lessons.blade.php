@@ -20,7 +20,7 @@
       <p style="font-size: 20px">
       <?php 
         //retrieving of files
-        $contents = File::get(storage_Path('../resources/lessons/samp.txt'));
+        $contents = File::get(storage_Path('../resources/lessons/vince.txt'));
         $exploded = explode("@",$contents);
 
         foreach ($exploded as $line) {

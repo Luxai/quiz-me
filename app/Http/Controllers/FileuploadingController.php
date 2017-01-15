@@ -57,7 +57,8 @@ class FileuploadingController extends Controller
           echo 'Uploaded : '.$file->getClientOriginalName();
           echo '<br>';    
           echo '<br>'; 
-          echo '<br>';    
+          echo '<br>';
+          //move file to a destination       renames the file moved
           $file->move($destinationPath, $file->getClientOriginalName());
 
         }
