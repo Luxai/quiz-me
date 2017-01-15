@@ -15,7 +15,19 @@ class FileuploadingController extends Controller
     // create new function for show uploaded page
     public function showfileupload(Request $request){
       $file = $request -> file('image');
+
+      //retrieving of files
+      File::get(storage_Path('uploads/vince.txt'));
       // show the file name
+      if ($file == null) {
+        # code...
+         Redirect::route('uploadfile');
+
+      }
+      
+      else {
+
+
       echo 'File Name : '.$file->getClientOriginalName();
       echo '<br>';
 
@@ -36,8 +48,12 @@ class FileuploadingController extends Controller
       echo '<br>';
 
       // move uploaded File
-      $destinationPath = 'uploads';
+      $destinationPath = 'storage';
       $file->move($destinationPath,$file->getClientOriginalName());
+      }
+
+
+      
     }
 }
 

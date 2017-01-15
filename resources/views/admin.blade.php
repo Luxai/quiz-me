@@ -56,7 +56,7 @@
       <h5><span class="glyphicon glyphicon-time"> January 2016</h5>
       <h4>Finding the value of expressions</h4><br>
       <p>Learn how to find the values of variables!</p>
-      <br><a href="/uploadfile"><button class="btn btn-default btn-lg">Go to Lessons</button></a>
+      <br><a href="/lessons"><button class="btn btn-default btn-lg">Go to Lessons</button></a>
     </div>
     
   </div>

@@ -24,17 +24,17 @@
     <?php
       
      echo '<p align=\'left\'>';
+        echo '<br><br><br>';
+        echo Form::open(['&nbsp;&nbsp;url'=>'/uploadfile','files'=>'true']);
+        echo '&nbsp;&nbsp;&nbsp;Upload a New Lesson? ';
         echo '<br>';
-        echo '<br>';
-        echo '<br>'; 
-
-        echo Form::open(['url'=>'/uploadfile','files'=>'true']);
-        echo '&nbsp;&nbsp;&nbsp;Please Select a File to Upload ';
-        echo '<br>';
-        echo Form::file('image');
+       echo Form::file('image');
+       //echo   '<a href="/register"><button class="btn btn-default btn-lg" type="submit">Choose File</button></a>';
         echo '<br>';  
         echo '&nbsp;&nbsp;';
-        echo Form::submit('Upload File');
+       echo Form::submit('Upload File');
+     // echo  '<a href="/uploadfile"><button class="btn btn-default btn-lg" type="">Upload File</button></a>';
+      // echo '$up'
         echo '<br>';
         echo Form::close();
       echo '</p>';

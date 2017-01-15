@@ -5,6 +5,11 @@ body {
     background-repeat: repeat;
 }
 
+p {
+  color: #FF0;
+
+}
+
 
 .selectdiv {
   position: relative;
