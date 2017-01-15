@@ -18,18 +18,76 @@
   	<div class="row">
     <div class="col-sm-8">
       <p style="font-size: 20px">
-      <?php 
+      
+        <!-- //list available lessons
         //retrieving of files
-        $contents = File::get(storage_Path('../resources/lessons/vince.txt'));
-        $exploded = explode("@",$contents);
+        // $ctr = 1;
+        // for($ctr;$ctr<4;$ctr++){
+          
+        //   $contents = File::get(storage_Path("../resources/lessons/lesson$ctr.txt"));
+        //   //$exploded = explode("@",$contents);
 
-        foreach ($exploded as $line) {
-          if (strpos($line, '20') == true)
-            echo "<h1>$line</h1><br>";
-          else
-            echo "$line<br>";
-        }
-      ?>
+        //   <p>$contents</p>";
+        //   // foreach ($exploded as $line) {
+        //   //   if (strpos($line, '20') == true)
+        //   //     <h1>$line</h1><br>";
+        //   //   else
+        //   //     $line<br>";
+        //   // }
+        //     <br>";
+        //   } -->
+         <center>
+           <select class="form-control" size="1" style="width:auto;font-size: 20px;" name="selectCoach" id="selectCoach" onchange="changeCoach(this.value)">  
+          <!-- //creates choices of available lessons
+          //change 4 to available lessons in db -->
+          @for($ctr = 1;$ctr<4;$ctr++)
+            <option value={{$ctr}}> lesson{{$ctr}} </option>
+          @endfor 
+
+          lesson {{$ctr}}
+          </select>
+          <br/>
+          <div id="display_coach"></div>
+        </center>
+      
+        <script type="text/javascript">
+
+          function changeCoach(userChoice){
+            var output= document.getElementById("display_coach");
+            output.innerHTML="";
+
+            //loops content of selected lesson
+            
+              if(userChoice == 1) {
+                output.innerHTML = '<div> lesson1 {{ $contents = File::get(storage_Path("../resources/lessons/lesson1.txt")) }} {{ $contents}} </div>';
+              }
+          // $ctr = 2;
+          // for($ctr;$ctr<4;$ctr++){
+          //     else if(userChoice == \"lesson$ctr\") {";
+          //       output.innerHTML=\'<div>
+                  
+          //         //contents of lesson here
+          //         lesson$ctr";
+
+          //         $contents = File::get(storage_Path("../resources/lessons/lesson$ctr.txt"));
+          //         $exploded = explode("@",$contents);
+
+
+          //         foreach (explode("@",$contents) as $line) {
+          //           if (strpos($line, '20') == true)
+          //             <h1>$line</h1><br>";
+          //           else
+          //             $line<br>";
+          //         }
+                  
+          //       <\div>\
+          //     }
+
+         }
+
+          
+        
+        </script>
       </p>
     </div>
   </div>

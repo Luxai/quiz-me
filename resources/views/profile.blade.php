@@ -13,7 +13,8 @@
   <li><a href="#profile">PROFILE</a></li>
 @stop
 
-@section('body')
+//change to home
+@section('admin')
 
 <div id="profile" class="container-fluid bg-grey">
       <center><h2>Select Coach</h2></center>
@@ -31,7 +32,7 @@
 
 	<div id="display_coach"><img src="/rsc/coach/m1Neutral.png" width="30%" height="30%" /></div>
 
-	</center>
+	</center> 
 
 	<script type="text/javascript">
 
